@@ -64,6 +64,10 @@ function downloadLists {
         # Ranges for things that are unusual in some way.
         # The level3 list is aka the paranoid list.
         "level3.7z http://list.iblocklist.com/?list=uwnukjqktoggdknzrhgh&fileformat=p2p&archiveformat=7z"
+        # Contains all known Educational Institutions.
+        "edu.7z http://list.iblocklist.com/?list=imlmncgrkbnacgcwfjvh&fileformat=p2p&archiveformat=7z"
+        # Contains addresses of suspicious IP's that are under investigation.
+        "rangetest.7z http://list.iblocklist.com/?list=plkehquoahljmyxjixpu&fileformat=p2p&archiveformat=7z"
         # Unallocated address space.
         "bogon.7z http://list.iblocklist.com/?list=gihxqmhyunbxhbmgqrla&fileformat=p2p&archiveformat=7z"
         # Contains advertising trackers and a short list of bad/intrusive porn sites.
