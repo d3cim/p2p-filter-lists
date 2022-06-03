@@ -1,7 +1,8 @@
 #!/bin/bash
 
-#    P2P-filter-lists is a script to download lists of IPs.
+#    p2p-filter-lists is a script to download lists of IPs.
 #    Copyright (C) 2017  Rémi Ducceschi (remileduc) <remi.ducceschi@gmail.com>
+#    Copyright (C) 2022  quindecim <https://github.com/quindecim>
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -15,8 +16,6 @@
 #
 #    You should have received a copy of the GNU General Public License
 #    along with this program. If not, see <http://www.gnu.org/licenses/>.
-
-# Used to download IP filtered lists for qbittorent
 
 set -eu -o pipefail
 
