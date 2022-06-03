@@ -41,11 +41,12 @@ Sub downloadFiles(shell, path)
 	' Ranges for things that are unusual in some way.
 	' The level3 list is aka the paranoid list.
 	downloadAndExtract shell, "http://list.iblocklist.com/?list=uwnukjqktoggdknzrhgh&fileformat=p2p&archiveformat=7z", path & "\level3.7z"
-	' Unallocated address space.
 	' Contains all known Educational Institutions.
 	downloadAndExtract shell, "http://list.iblocklist.com/?list=imlmncgrkbnacgcwfjvh&fileformat=p2p&archiveformat=7z", path & "\edu.7z"
 	' Contains addresses of suspicious IP's that are under investigation.
-	downloadAndExtract shell, "http://list.iblocklist.com/?list=plkehquoahljmyxjixpu&fileformat=p2p&archiveformat=7z", path & "\rangetest.7z"downloadAndExtract shell, "http://list.iblocklist.com/?list=gihxqmhyunbxhbmgqrla&fileformat=p2p&archiveformat=7z", path & "\bogon.7z"
+	downloadAndExtract shell, "http://list.iblocklist.com/?list=plkehquoahljmyxjixpu&fileformat=p2p&archiveformat=7z", path & "\rangetest.7z"
+	' Unallocated address space.
+    downloadAndExtract shell, "http://list.iblocklist.com/?list=gihxqmhyunbxhbmgqrla&fileformat=p2p&archiveformat=7z", path & "\bogon.7z"
 	' Contains advertising trackers and a short list of bad/intrusive porn sites.
 	downloadAndExtract shell, "http://list.iblocklist.com/?list=dgxtneitpuvgqqcpfulq&fileformat=p2p&archiveformat=7z", path & "\ads.7z"
 	' Known malicious spyware and adware IP Address ranges.
