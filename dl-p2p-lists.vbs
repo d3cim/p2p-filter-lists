@@ -1,21 +1,3 @@
-'    P2P-filter-lists is a script to download lists of IPs.
-'    Copyright (C) 2017  Rémi Ducceschi (remileduc) <remi.ducceschi@gmail.com>
-'
-'    This program is free software: you can redistribute it and/or modify
-'    it under the terms of the GNU General Public License as published by
-'    the Free Software Foundation, either version 3 of the License, or
-'    (at your option) any later version.
-'
-'    This program is distributed in the hope that it will be useful,
-'    but WITHOUT ANY WARRANTY; without even the implied warranty of
-'    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-'    GNU General Public License for more details.
-'
-'    You should have received a copy of the GNU General Public License
-'    along with this program. If not, see <http://www.gnu.org/licenses/>.
-
-' Downloads P2P filter lists and concatenate them in one list
-
 main()
 
 Sub main()
@@ -35,7 +17,7 @@ Sub main()
 	shell.Run "cmd /C del " & tempPath & "\*.txt", 0, True
 
 	' Script finished
-	MsgBox "Script fini ! Vous pouvez maintenant mettre à jour a liste dans qBittorrent en allant dans ""Outils -> Options... -> Connexions"". En bas de la page, dans la section ""Filtrage IP"", cliquer sur recharger (la fèche verte)."
+	MsgBox "Script finished! You can update the lists in qBittorrent via 'Tools -> Preferences -> Connection -> IP Filtering', click on 'Reload the filter' button."
 	wscript.Quit
 End Sub
 
@@ -60,7 +42,10 @@ Sub downloadFiles(shell, path)
 	' The level3 list is aka the paranoid list.
 	downloadAndExtract shell, "http://list.iblocklist.com/?list=uwnukjqktoggdknzrhgh&fileformat=p2p&archiveformat=7z", path & "\level3.7z"
 	' Unallocated address space.
-	downloadAndExtract shell, "http://list.iblocklist.com/?list=gihxqmhyunbxhbmgqrla&fileformat=p2p&archiveformat=7z", path & "\bogon.7z"
+	' Contains all known Educational Institutions.
+	downloadAndExtract shell, "http://list.iblocklist.com/?list=imlmncgrkbnacgcwfjvh&fileformat=p2p&archiveformat=7z", path & "\edu.7z"
+	' Contains addresses of suspicious IP's that are under investigation.
+	downloadAndExtract shell, "http://list.iblocklist.com/?list=plkehquoahljmyxjixpu&fileformat=p2p&archiveformat=7z", path & "\rangetest.7z"downloadAndExtract shell, "http://list.iblocklist.com/?list=gihxqmhyunbxhbmgqrla&fileformat=p2p&archiveformat=7z", path & "\bogon.7z"
 	' Contains advertising trackers and a short list of bad/intrusive porn sites.
 	downloadAndExtract shell, "http://list.iblocklist.com/?list=dgxtneitpuvgqqcpfulq&fileformat=p2p&archiveformat=7z", path & "\ads.7z"
 	' Known malicious spyware and adware IP Address ranges.
