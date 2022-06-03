@@ -39,7 +39,7 @@ function main {
     echo
     #rm -rf "$(pwd)"
 
-    echo "Script finished! You can update the lists in qBittorrent via 'Tools -> Options... -> Connections'. At the bottom of the page, section 'Filtrage IP', click on 'reload' (green arrow)."
+    echo "Script finished! You can update the lists in qBittorrent via 'Tools -> Preferences -> Connection -> IP Filtering', click on 'Reload the filter' button."
     echo
 }
 
