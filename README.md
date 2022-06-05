@@ -5,13 +5,17 @@ Download several lists from https://www.iblocklist.com/lists and concatenate the
 
 This type of file can be directly loaded in several Bittorrent clients like qBittorent, Ktorrent or others... Currently, these lists are downloaded, but you can easily add or remove some by editing the script:
 
-- level1
-- level2
-- level3
 - ads
 - badpeers
 - bogon
+- bogon (cidr-report.org)
+- dshield
 - edu
+- hijacked
+- level1
+- level2
+- level3
+- Microsoft
 - pedophile
 - rangetest
 - spyware
@@ -19,7 +23,9 @@ This type of file can be directly loaded in several Bittorrent clients like qBit
 For Linux
 =========
 
-You can simply run the script `dl-p2p-lists.sh`. The final file will be created in `/tmp/qbittorrent_lists_$USER.p2p`.
+**1.** Give to the script the right permissions with: `chmod u+x dl-p2p-lists.sh`.
+
+**2.** Run the script with: `./dl-p2p-lists.sh` and follow the final instructions.
 
 For Windows
 ===========
