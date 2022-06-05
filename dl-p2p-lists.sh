@@ -59,6 +59,14 @@ function downloadLists {
         "spyware.7z http://list.iblocklist.com/?list=llvtlsjyoyiczbkjsxpf&fileformat=p2p&archiveformat=7z"
         # List of people who have been reported for bad deeds in p2p.
         "badpeers.7z http://list.iblocklist.com/?list=cwworuawihqvocglcoss&fileformat=p2p&archiveformat=7z"
+        # All the known Microsoft ranges.
+        "Microsoft.7z http://list.iblocklist.com/?list=xshktygkujudfnjfioro&fileformat=p2p&archiveformat=7z"
+        # Contains hijacked IPs and known IPs that are used to deliver spam.
+        "hijacked.7z http://list.iblocklist.com/?list=usrcshglbiilevmyfhse&fileformat=p2p&archiveformat=7z"
+        # Contains known Hackers and such people in it.
+        "dshield.7z http://list.iblocklist.com/?list=xpbqleszmajjesnzddhv&fileformat=p2p&archiveformat=7z"
+        # Unallocated address space. (cidr-report.org)
+        "bogon.7z http://list.iblocklist.com/?list=lujdnbasfaaixitgmxpp&fileformat=p2p&archiveformat=7z"
     )
     echo "${lists[*]}" | xargs -n 2 -P 4 wget -O
 }

@@ -46,13 +46,21 @@ Sub downloadFiles(shell, path)
 	' Contains addresses of suspicious IP's that are under investigation.
 	downloadAndExtract shell, "http://list.iblocklist.com/?list=plkehquoahljmyxjixpu&fileformat=p2p&archiveformat=7z", path & "\rangetest.7z"
 	' Unallocated address space.
-	downloadAndExtract shell, "http://list.iblocklist.com/?list=gihxqmhyunbxhbmgqrla&fileformat=p2p&archiveformat=7z", path & "\bogon.7z"
+    downloadAndExtract shell, "http://list.iblocklist.com/?list=gihxqmhyunbxhbmgqrla&fileformat=p2p&archiveformat=7z", path & "\bogon.7z"
 	' Contains advertising trackers and a short list of bad/intrusive porn sites.
 	downloadAndExtract shell, "http://list.iblocklist.com/?list=dgxtneitpuvgqqcpfulq&fileformat=p2p&archiveformat=7z", path & "\ads.7z"
 	' Known malicious spyware and adware IP Address ranges.
 	downloadAndExtract shell, "http://list.iblocklist.com/?list=llvtlsjyoyiczbkjsxpf&fileformat=p2p&archiveformat=7z", path & "\spyware.7z"
 	' List of people who have been reported for bad deeds in p2p.
 	downloadAndExtract shell, "http://list.iblocklist.com/?list=cwworuawihqvocglcoss&fileformat=p2p&archiveformat=7z", path & "\badpeers.7z"
+	' All the known Microsoft ranges.
+	downloadAndExtract shell, "http://list.iblocklist.com/?list=xshktygkujudfnjfioro&fileformat=p2p&archiveformat=7z", path & "\Microsoft.7z"
+	' Contains hijacked IPs and known IPs that are used to deliver spam.
+	downloadAndExtract shell, "http://list.iblocklist.com/?list=usrcshglbiilevmyfhse&fileformat=p2p&archiveformat=7z", path & "\hijacked.7z"
+	' Contains known Hackers and such people in it.
+	downloadAndExtract shell, "http://list.iblocklist.com/?list=xpbqleszmajjesnzddhv&fileformat=p2p&archiveformat=7z", path & "\dshield.7z"
+	' Unallocated address space. (cidr-report.org)
+	downloadAndExtract shell, "http://list.iblocklist.com/?list=lujdnbasfaaixitgmxpp&fileformat=p2p&archiveformat=7z", path & "\bogon.7z"
 End Sub
 
 Sub downloadAndExtract(shell, url, filename)
